@@ -30,7 +30,7 @@ Some of the variables in `utils.cpp` are edited with examples. The pins selected
 
 The goal was to have fun trying to minimize the footprint of a DNS sinkhole. This project gave an added bonus in that the Xiao plus WIZ850 (a WizNet W5500 already attached to an RJ45 port)  can run off the USB port of another host in my homelab, and the RJ45 port removes the need to rely on Wi-Fi being flawless for the sinkhole to function properly. \*note that you can make the ESP32 AdBlocker a wireless node on your system.
 
-While [Pi-hole](https://github.com/pi-hole/pi-hole) is hands-down incredible with a solid GUI, I tend to operate as much as possible on a "set it and forget it" mindset. My homelab's network infrastructure is critical to everything else running on it, so I avoid making changes unless something's actually broken; meaning improvements wait until I'm doing a deliberate, complete overhaul rather than making small, frequent ad hoc changes.
+While [Pi-hole](https://github.com/pi-hole/pi-hole) is hands-down incredible with a solid GUI, I tend to operate as much as possible on a "set it and forget it" mindset. My homelab's network infrastructure is critical to everything else running on it, so I avoid making changes unless something's actually broken; meaning improvements wait until I'm doing a deliberate, complete overhaul rather than making small, frequent ad hoc changes.  
 [⬆ Back to Top](#TOC)  
 
 <a name="hardware"></a>
@@ -67,7 +67,7 @@ Alternative WIZ850io part options:
 [Option 1](https://www.digikey.com/short/7r393hjr) [Doc](https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/6546/333039%20Ethernet%20controller%20W5500%20board%20datasheet.pdf)  
 [Option 2](https://www.digikey.com/short/bjm8p37p) [Doc](https://download.mikroe.com/documents/standards/mikrobus/mikrobus-standard-specification-v200.pdf)  
 [Option 3](https://www.digikey.com/short/d8t8vnqt) [Doc](https://cdn-learn.adafruit.com/downloads/pdf/adafruit-wiz5500-ethernet-co-processor-breakout-board.pdf)  
-\*Be warned that my documentation does not cover wiring diagrams for these parts, I am providing these links as options solely because they fit the super-tiny form factor goal, and you may want a variety of options. The Espressif ESP32 in it's many forms from devkit to SFF options isn't far off, either. I just wanted a DNS sinkhole I could toss in my pocket and standup a travel network in a hotel room, per se.
+\*Be warned that my documentation does not cover wiring diagrams for these parts, I am providing these links as options solely because they fit the super-tiny form factor goal, and you may want a variety of options. The Espressif ESP32 in it's many forms from devkit to SFF options isn't far off, either. I just wanted a DNS sinkhole I could toss in my pocket and standup a travel network in a hotel room, per se.  
 [⬆ Back to Top](#TOC)  
 
 <a name="wiring"></a>
@@ -104,12 +104,14 @@ Alternative WIZ850io part options:
 | J2-2 / J2-3 | 3V3 | 3.3V power (shared rail) |
 | J2-4 | NC | Not Connected |
 | J2-5 | RSTn | Hardware Reset input (active low) |
-| J2-6 | MISO | SPI Master-In/Slave-Out |
+| J2-6 | MISO | SPI Master-In/Slave-Out |  
+  
 [⬆ Back to Top](#TOC)  
 
 <a name="wiringdiagrams"></a>
 ### Wiring Diagrams
-<img width="685" height="637" alt="image" src="https://github.com/user-attachments/assets/17c15415-d7b8-491d-8764-c352e51aca8a" />
+<img width="685" height="637" alt="image" src="https://github.com/user-attachments/assets/17c15415-d7b8-491d-8764-c352e51aca8a" />  
+  
 [⬆ Back to Top](#TOC)
 
 <a name="pinouts"></a>
@@ -126,7 +128,8 @@ Alternative WIZ850io part options:
 | RX | Not Connected |
 | GPIO1 | RST |
 | GPIO2 | INT |
-| GPIO3 | SCN |
+| GPIO3 | SCN |  
+  
 [⬆ Back to Top](#TOC)
 
 <a name="firmwareconfig"
@@ -143,16 +146,17 @@ int ethSclk = 7; // W5500 SPI clock / LAN8720 CLOCK
 int ethMiso = 8; // W5500 SPI data pin
 int ethMosi = 9; // W5500 SPI data pin
 ```
+  
 [⬆ Back to Top](#TOC)  
 
 <a name="libs"></>
 ## Arduino Libraries  
-
+  
 [⬆ Back to Top](#TOC)  
 
 <a name="idfk"></>
-## Other Info
+## Other Info  
 It's july and I have a GSD/Malinois mix who is still shedding. There's fure everywhere. 
-There's probably fur in this code, and if you use it, you might get some little floofs flying out your system exhaust fans... don't say you weren't warned!
-
+There's probably fur in this code, and if you use it, you might get some little floofs flying out your system exhaust fans... don't say you weren't warned!  
+  
 [⬆ Back to Top](#TOC) 
