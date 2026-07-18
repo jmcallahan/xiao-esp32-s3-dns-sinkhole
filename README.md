@@ -6,7 +6,7 @@ An ultra-tiny DNS Sinkhole replacing a Raspberry Pi 3B running Pi-hole.
 [About](#about)  
 [Hardware](#hardware)  
 [Wiring](#wiring)  
-[rWiring Diagrams](#wiringdiagrams)  
+[Wiring Diagrams](#wiringdiagrams)  
 [Pinout Explanations](#pinouts)  
 [Firmware Configuration](#firmware)  
 [Arduino Libraries](#libs)  
