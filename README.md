@@ -14,7 +14,7 @@ An ultra-tiny DNS Sinkhole replacing a Raspberry Pi 3B running Pi-hole.
 
 <a name="about"></a>
 ## About
-This is my copy of the ESP32 AdBlocker by [s60sc](https://github.com/s60sc), found [here](https://github.com/s60sc/ESP32_AdBlocker).
+This is my copy of the ESP32 AdBlocker by [s60sc](https://github.com/s60sc), found [here](https://github.com/s60sc/ESP32_AdBlocker).  
 \*\*note: s60sc says they modified it from [this repo](https://github.com/rubfi/esphole) by [rubfi](https://github.com/rubfi) in the opening lines of their code (preserved comments in my fork)
 
 The DNS Blocklist is based off the same hosts available from [StephenBlack's](https://github.com/StevenBlack) Hosts [repo](https://github.com/StevenBlack/hosts). 
