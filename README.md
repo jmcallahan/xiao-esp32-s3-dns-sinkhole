@@ -39,7 +39,7 @@ While [Pi-hole](https://github.com/pi-hole/pi-hole) is hands-down incredible wit
 - [AliExpress](https://www.aliexpress.us/item/3256811966613867.html)
 - [Digikey](https://www.digikey.com/short/8ptmdd71)
 
-Alternative WIS850io part options:  
+Alternative WIZ850io part options:  
 [Option 1](https://www.digikey.com/short/7r393hjr) [Doc](https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/6546/333039%20Ethernet%20controller%20W5500%20board%20datasheet.pdf)  
 [Option 2](https://www.digikey.com/short/bjm8p37p) [Doc](https://download.mikroe.com/documents/standards/mikrobus/mikrobus-standard-specification-v200.pdf)  
 [Option 3](https://www.digikey.com/short/d8t8vnqt) [Doc](https://cdn-learn.adafruit.com/downloads/pdf/adafruit-wiz5500-ethernet-co-processor-breakout-board.pdf)  
