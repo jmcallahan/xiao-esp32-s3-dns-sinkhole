@@ -1,16 +1,40 @@
 # xiao-esp32-s3-dns-sinkhole
 An ultra-tiny DNS Sinkhole replacing a Raspberry Pi 3B running Pi-hole.
 
+<a name="TOC"></a>
+## Table of Contents
+[About](#about)
+[Hardware](#hardware)
+[Wiring](#wiring)
+[rWiring Diagrams](#wiringdiagrams)
+[Pinout Explanations](#pinouts)
+[Firmware Configuration](#firmware)
+[Arduino Libraries](#libs)
+[Other Info](#idfk)
+
+<a name="about"></a>
 ## About
 This is my copy of the ESP32 AdBlocker by [s60sc](https://github.com/s60sc), found [here](https://github.com/s60sc/ESP32_AdBlocker).
+\*\*note: s60sc says they modified it from [this repo](https://github.com/rubfi/esphole) by [rubfi](https://github.com/rubfi) in the opening lines of their code (preserved comments in my fork)
+
+The DNS Blocklist is based off the same hosts available from [StephenBlack's](https://github.com/StevenBlack) Hosts [repo](https://github.com/StevenBlack/hosts). 
+!!!---IMPORTANT---!!! 
+StephenBlack's hosts list actually has 'flavos', so to speak.
+- If you want to filtter Adware/Malware/Site Ads, there's a list for just that.
+- Adware/Malware/Site Ads AND Fake News? There's a list for that.
+- There are lists to titrate the things you don't mind seeing, absolutely don't want, repulsed by pornography sites? StephenBlack has a blocklist for that.
+
+The point is, you control your fate. At times DNS blocking can get a little overzealous and block a thing your actually want.
 
 Some of the variables in `utils.cpp` are edited with examples. The pins selected in `utils.cpp` reference those found on the Xiao ESP32-S3 from Seeed Studio. You can check that out [here](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html) if you're not familiar, or read the [Wiki](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/).
 
 The goal was to have fun trying to minimize the footprint of a DNS sinkhole. This project gave an added bonus in that the Xiao plus WIZ850 (a WizNet W5500 already attached to an RJ45 port)  can run off the USB port of another host in my homelab, and the RJ45 port removes the need to rely on Wi-Fi being flawless for the sinkhole to function properly. \*note that you can make the ESP32 AdBlocker a wireless node on your system.
 
 While [Pi-hole](https://github.com/pi-hole/pi-hole) is hands-down incredible with a solid GUI, I tend to operate as much as possible on a "set it and forget it" mindset. My homelab's network infrastructure is critical to everything else running on it, so I avoid making changes unless something's actually broken; meaning improvements wait until I'm doing a deliberate, complete overhaul rather than making small, frequent ad hoc changes.
+[⬆ Back to Top](#TOC)  
 
-## Hardware
+<a name="hardware"></a>
+## Hardware  
 
 ### Seeed Studio XIAO ESP32-S3
 
@@ -44,7 +68,9 @@ Alternative WIZ850io part options:
 [Option 2](https://www.digikey.com/short/bjm8p37p) [Doc](https://download.mikroe.com/documents/standards/mikrobus/mikrobus-standard-specification-v200.pdf)  
 [Option 3](https://www.digikey.com/short/d8t8vnqt) [Doc](https://cdn-learn.adafruit.com/downloads/pdf/adafruit-wiz5500-ethernet-co-processor-breakout-board.pdf)  
 \*Be warned that my documentation does not cover wiring diagrams for these parts, I am providing these links as options solely because they fit the super-tiny form factor goal, and you may want a variety of options. The Espressif ESP32 in it's many forms from devkit to SFF options isn't far off, either. I just wanted a DNS sinkhole I could toss in my pocket and standup a travel network in a hotel room, per se.
+[⬆ Back to Top](#TOC)  
 
+<a name="wiring"></a>
 ## Wiring
 <img width="685" height="724" alt="image" src="https://github.com/user-attachments/assets/51ce75ff-c247-435a-b651-6ae02c3f1e3a" />
 
@@ -79,11 +105,14 @@ Alternative WIZ850io part options:
 | J2-4 | NC | Not Connected |
 | J2-5 | RSTn | Hardware Reset input (active low) |
 | J2-6 | MISO | SPI Master-In/Slave-Out |
+[⬆ Back to Top](#TOC)  
 
+<a name="wiringdiagrams"></a>
 ### Wiring Diagrams
 <img width="685" height="637" alt="image" src="https://github.com/user-attachments/assets/17c15415-d7b8-491d-8764-c352e51aca8a" />
+[⬆ Back to Top](#TOC)
 
-
+<a name="pinouts"></a>
 ### Wiring Explanation
 
 | ESP32 Pin | WIZ850io Pin |
@@ -98,7 +127,9 @@ Alternative WIZ850io part options:
 | GPIO1 | RST |
 | GPIO2 | INT |
 | GPIO3 | SCN |
+[⬆ Back to Top](#TOC)
 
+<a name="firmwareconfig"
 ## Firmware Configuration
 
 In `utils.cpp`, locate the section detailing the SPI pins:
@@ -112,3 +143,16 @@ int ethSclk = 7; // W5500 SPI clock / LAN8720 CLOCK
 int ethMiso = 8; // W5500 SPI data pin
 int ethMosi = 9; // W5500 SPI data pin
 ```
+[⬆ Back to Top](#TOC)  
+
+<a name="libs"></>
+## Arduino Libraries  
+
+[⬆ Back to Top](#TOC)  
+
+<a name="idfk"></>
+## Other Info
+It's july and I have a GSD/Malinois mix who is still shedding. There's fure everywhere. 
+There's probably fur in this code, and if you use it, you might get some little floofs flying out your system exhaust fans... don't say you weren't warned!
+
+[⬆ Back to Top](#TOC) 
