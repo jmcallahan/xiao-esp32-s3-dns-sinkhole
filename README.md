@@ -3,14 +3,14 @@ An ultra-tiny DNS Sinkhole replacing a Raspberry Pi 3B running Pi-hole.
 
 <a name="TOC"></a>
 ## Table of Contents
-[About](#about)
-[Hardware](#hardware)
-[Wiring](#wiring)
-[rWiring Diagrams](#wiringdiagrams)
-[Pinout Explanations](#pinouts)
-[Firmware Configuration](#firmware)
-[Arduino Libraries](#libs)
-[Other Info](#idfk)
+[About](#about)  
+[Hardware](#hardware)  
+[Wiring](#wiring)  
+[rWiring Diagrams](#wiringdiagrams)  
+[Pinout Explanations](#pinouts)  
+[Firmware Configuration](#firmware)  
+[Arduino Libraries](#libs)  
+[Other Info](#idfk)  
 
 <a name="about"></a>
 ## About
