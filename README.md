@@ -8,7 +8,7 @@ An ultra-tiny DNS Sinkhole replacing a Raspberry Pi 3B running Pi-hole.
 [Wiring](#wiring)  
 [Wiring Diagrams](#wiringdiagrams)  
 [Pinout Explanations](#pinouts)  
-[Firmware Configuration](#firmware)  
+[Firmware Configuration](#firmwareconfig)  
 [Arduino Libraries](#libs)  
 [Other Info](#idfk)  
 
@@ -19,8 +19,8 @@ This is my copy of the ESP32 AdBlocker by [s60sc](https://github.com/s60sc), fou
 
 The DNS Blocklist is based off the same hosts available from [StephenBlack's](https://github.com/StevenBlack) Hosts [repo](https://github.com/StevenBlack/hosts). 
 !!!---IMPORTANT---!!! 
-StephenBlack's hosts list actually has 'flavos', so to speak.
-- If you want to filtter Adware/Malware/Site Ads, there's a list for just that.
+StephenBlack's hosts list actually has 'flavors', so to speak.
+- If you want to filter Adware/Malware/Site Ads, there's a list for just that.
 - Adware/Malware/Site Ads AND Fake News? There's a list for that.
 - There are lists to titrate the things you don't mind seeing, absolutely don't want, repulsed by pornography sites? StephenBlack has a blocklist for that.
 
@@ -132,7 +132,7 @@ Alternative WIZ850io part options:
   
 [⬆ Back to Top](#TOC)
 
-<a name="firmwareconfig"
+<a name="firmwareconfig"></a>
 ## Firmware Configuration
 
 In `utils.cpp`, locate the section detailing the SPI pins:
