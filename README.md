@@ -72,7 +72,9 @@ Alternative WIZ850io part options:
 
 <a name="wiring"></a>
 ## Wiring
-<img width="685" height="724" alt="image" src="https://github.com/user-attachments/assets/51ce75ff-c247-435a-b651-6ae02c3f1e3a" />
+<img width="765" height="874" alt="image" src="https://github.com/user-attachments/assets/bc886062-81c2-41c8-b980-b68eabde5298" />  
+
+
 
 
 ### XIAO ESP32-S3 Pinout (as used in this build)
@@ -110,7 +112,8 @@ Alternative WIZ850io part options:
 
 <a name="wiringdiagrams"></a>
 ### Wiring Diagrams
-<img width="685" height="637" alt="image" src="https://github.com/user-attachments/assets/17c15415-d7b8-491d-8764-c352e51aca8a" />  
+<img width="1848" height="768" alt="image" src="https://github.com/user-attachments/assets/c7a2f247-af64-42ec-8efb-c3b35b583ad4" />  
+<img width="1848" height="848" alt="image" src="https://github.com/user-attachments/assets/d2fb236b-c2ad-4d92-aa63-2faff0306197" />  
   
 [⬆ Back to Top](#TOC)
 
